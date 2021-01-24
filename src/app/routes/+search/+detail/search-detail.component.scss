@@ -1,0 +1,40 @@
+@import './src/scss/_exports';
+.search__detail {
+  background-color: #c43d38;
+
+  .container {
+    min-height: calc(100vh - 131px);
+    padding-top: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    flex-direction: column;
+
+    .result {
+      &__title {
+        color:#ffffff;
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+
+      &__subtitle {
+        color:#000000;
+        font-size: 1rem;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+.link__back {
+  padding: 20px;
+  background-color: #1a1a1a;
+  a {
+    color: #ffffff;
+  }
+}

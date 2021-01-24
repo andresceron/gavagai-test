@@ -1,0 +1,18 @@
+<div class="searchbox">
+  <form #f="ngForm" [formGroup]="searchFormGroup" (keyup.enter)="onSearch()" (ngSubmit)="onSearch()">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-12 p-0">
+        <input type="text" class="form-control search-control" placeholder="What word are you looking for..." formControlName="query">
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+        <select class="form-control search-control" formControlName="selector">
+          <option value="">{{dropdownTitle}}</option>
+          <option *ngFor="let option of dropdownList" [ngValue]="option">{{option.name}}</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+        <button type="submit" class="btn btn-danger search-btn">Search</button>
+      </div>
+    </div>
+  </form>
+</div>

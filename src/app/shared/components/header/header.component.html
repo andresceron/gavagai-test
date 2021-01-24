@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-dark">
+     <div class="container p-0">
+       <a class="navbar-brand" routerLink="/">
+        <img src="/assets/logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler navbar-dark p-0" type="button" (click)="menuToggled = !menuToggled">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse" [ngClass]="menuToggled ? '' : 'collapse'">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" routerLink="/" routerLinkActive="nav-link--active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" routerLink="/contact" routerLinkActive="nav-link--active">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

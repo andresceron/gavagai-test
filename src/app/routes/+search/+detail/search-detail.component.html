@@ -1,0 +1,31 @@
+<div class="link__back">
+  <a href="javascript:void(0)" (click)="backToPrevious()">&#60; BACK TO RESULTS</a>
+</div>
+<div class="search__detail">
+  <div class="container">
+    <ng-container *ngIf="detailResult && !isLoading">
+      <p class="result__title">Word:</p>
+      <p class="result__subtitle">{{detailResult.word}}</p>
+
+      <p class="result__title">Frequency:</p>
+      <p class="result__subtitle">{{detailResult.frequency}}</p>
+
+      <p class="result__title">Document Frequency:</p>
+      <p class="result__subtitle">{{detailResult.documentFrequency}}</p>
+
+      <p class="result__title">Absolute Rank:</p>
+      <p class="result__subtitle">{{detailResult.absoluteRank}}</p>
+
+      <p class="result__title">Relative Rank:</p>
+      <p class="result__subtitle">{{detailResult.relativeRank}}</p>
+
+      <p class="result__title">Vocabulary Size:</p>
+      <p class="result__subtitle">{{detailResult.vocabularySize}}</p>
+    </ng-container >
+    <div *ngIf="!detailResult && !isLoading" class="text-center">
+      <p>No sufficient data...</p>
+      <p>please go back and try another with another word</p>
+    </div>
+    <div class="spinner-border text-dark" *ngIf="isLoading"></div>
+  </div>
+</div>

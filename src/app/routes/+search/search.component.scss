@@ -1,0 +1,49 @@
+@import './src/scss/_exports';
+
+// .form-control:focus {
+//   box-shadow: none;
+// }
+
+// .form-control-underlined {
+//   border-width: 0;
+//   border-bottom-width: 1px;
+//   border-radius: 0;
+//   padding-left: 0;
+// }
+
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.container {
+  &__searchbox {
+    height: calc(40vh - 67px);
+    min-height: calc(40vh - 67px);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #f77f00;
+    padding: 15px;
+  }
+
+  &__list {
+    margin-top: 20px;
+    .loader {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.input-group {
+  input {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+  }
+}

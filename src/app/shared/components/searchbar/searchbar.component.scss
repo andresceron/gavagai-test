@@ -1,0 +1,19 @@
+@import './src/scss/_exports';
+
+.searchbox {
+  position: relative;
+}
+
+.search-control {
+  font-size: 0.875rem;
+  color: #55595c;
+  height: calc(3rem + 2px);
+  border-radius:0;
+}
+
+.search-btn {
+  width: 100%;
+  text-transform: uppercase;
+  height: calc(3rem + 2px);
+  border-radius:0;
+}

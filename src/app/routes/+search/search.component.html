@@ -1,0 +1,33 @@
+<div class="container__searchbox">
+  <div class="container">
+    <gav-searchbar
+      [dropdownList]="langList"
+      [dropdownTitle]="'Dropdown Custom Title'"
+      [dropdownSelected]="selectedLang"
+      [queryDefault]="wordValue"
+      (searchValue)="search($event)"
+      (selectorValue)="selector($event)"
+      ></gav-searchbar>
+  </div>
+</div>
+
+<div class="container__list">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 p-0">
+        <div class="list-group list-group-flush" *ngIf="similarWordsResults?.length && !isLoading">
+          <a (click)="goToDetail(item)" class="list-group-item list-group-item-action" *ngFor="let item of similarWordsResults">{{ item.word }}</a>
+        </div>
+        <div *ngIf="!similarWordsResults?.length && !isLoading" class="text-center">
+          <p *ngIf="!similarWordsResults">Type a word and search to get results</p>
+          <p *ngIf="similarWordsResults?.length === 0">No results found... please try another word</p>
+        </div>
+
+        <div *ngIf="isLoading" class="loader">
+          <div class="spinner-border text-dark"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

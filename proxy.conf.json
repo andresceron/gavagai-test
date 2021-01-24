@@ -1,0 +1,9 @@
+{
+  "/api": {
+      "target": "https://api.gavagai.se/v3/",
+      "secure": false,
+      "pathRewrite": {
+          "^/api": ""
+      }
+  }
+}
